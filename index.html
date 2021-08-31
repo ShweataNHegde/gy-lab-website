@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style type="text/css">
+
+:root{
+	--dark : #143732;
+	--light: #ffffff;
+	--mid: #03bbff;
+	--grey: #d9d9d9;
+	--gradient-light:#86f235;/*#4af6dd;*/
+	--gradient-dark:#87f8bb;/*#00c4cc;*/
+	--black:#000;
+}
+	
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: Montserrat,sans-serif;
+}	
+
+.main
+{
+	min-height: 100vh;
+
+	background-color: var(--dark);
+}
+
+
+.navdiv
+{
+	position: fixed;
+	top:0px;
+	width: 100%;
+	padding: 0.2rem 1.8rem;
+	background-color: var(--dark);
+	border-bottom: 1px solid #fff;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 5;
+	box-shadow: 0 3px 10px #ffffff11;
+}
+
+.logowrapper
+{
+	display: flex;
+}
+.logo
+{
+	color: var(--gradient-light);
+	font-weight: 600;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	background-size: cover;
+	background-position: center;
+	height: 60px;
+	width: 60px;
+	background-image: url('https://i.imgur.com/hFf0Tn3.png');
+	background-color: #fff;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border-top-right-radius: 10%;
+	border-bottom-right-radius: 10%;
+	box-shadow: 5px 0px 10px #000000dd,
+				-5px 0px 2px var(--gradient-light);
+}
+
+.textlogo
+{
+	font-size: 4em;
+	color:var(--gradient-light);
+	line-height: 60px;
+}
+
+.navlinks
+{
+
+	display: flex;
+}
+
+.navlinks .link a
+{
+	text-decoration: none;
+	color: var(--grey);
+	padding: 1rem;
+	transition: 0.05s;
+}
+
+.navlinks .link a:hover
+{
+	color: var(--gradient-light);
+	font-weight: bold;
+}
+
+.graphicdiv
+{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.smallcircle
+{
+	width: 30vw;
+	height: 30vw;
+	position: absolute;
+
+	border-radius: 50%;
+
+	background-image: linear-gradient(to bottom right,var(--gradient-light), #000);
+
+	bottom:0%;
+	left:-18%;
+}
+
+.smallcircle2
+{
+	width: 60vw;
+	height: 60vw;
+	position: absolute;
+
+	border-radius: 50%;
+
+
+	background-color: #000;
+	top:13%;
+	right:-14%;
+
+	box-shadow: -10px 0 40px #ffffff33;
+}
+
+.maintitle
+{
+	position: absolute;
+	font-size: 3em;
+	font-weight: 750;
+	top:40%;
+	width: 30vw;
+	color: #fff;
+	left: 17%;
+	letter-spacing: 4px;
+	border-top: 5px solid #fff;
+	padding-top: 1rem;
+}
+
+@media (max-width: 900px)
+{
+	.navdiv
+	{
+		padding:0.2rem 1.5rem;
+	}
+
+	.maintitle
+	{
+		font-size: 2em;
+		width: 80vw;
+		left:8%;
+		top:50%;
+	}
+
+	.logo
+	{
+		height: 50px;
+		width: 50px;
+	}
+
+	.textlogo
+	{
+		font-size: 3.4em;
+		line-height: 50px;
+	}
+	.navdiv	.navlinks
+	{
+		display: none;
+	}
+}
+.plant
+{
+	width: 35vw;
+	height: 35vw;
+	background-image: url('https://i.imgur.com/rO0CrFh.jpg');
+
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	right: 22%;
+	top: 13%;
+	/*filter: grayscale(1);*/
+}
+
+.maincontent
+{
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.maininner
+{
+	background-color: #143732;
+	width: 95%;
+	max-width: 1200px;
+	margin-top: 4rem;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+
+
+.container
+{
+	padding: 50px;
+	padding-top: 10px; 
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media (max-width: 900px)
+{
+	.maininner .container
+	{
+	padding: 8px;	
+	}
+
+}
+
+.cardcontainer
+{
+	width: 300px;
+	background-color: #fff;
+
+	border-radius: 8px;
+	overflow: hidden;
+
+	box-shadow: 7px 7px 15px #00000088;
+
+	margin: 2rem;
+}
+
+
+.cardtext
+{
+	padding: 1rem;
+	position: relative;
+	height: 200px;
+	overflow-y:scroll; 
+}
+
+.cardtext h3
+{
+	color: #666;
+	letter-spacing: 1px;
+}
+
+.cardtext p
+{
+	margin-top: 1rem;
+}
+
+.morebutton
+{
+	position: absolute;
+	background-color: #666;
+	color:#fff;
+	bottom: 1rem;
+	right: 1rem;
+	padding: 0.3rem;
+	border-radius: 10px;
+	opacity: 0.6;	
+	cursor: pointer;
+}
+
+.morebutton:hover
+{
+	opacity: 1;
+}
+
+.testdiv
+{
+	padding: 100px;
+}
+
+.tcard
+{
+	background-color: #fff;
+	max-width: 350px;
+	height: 250px;
+	padding: 2.5rem;
+	display: grid;
+	place-items:center;
+	margin: 10px;
+	border-radius: 5px;
+	box-shadow:  8px 8px 16px #00000099;
+}
+
+.tcard p
+{
+	font-size: 2em;
+	color: #aaa;
+	font-weight: 400;
+	text-align: center;
+}
+
+.tcard .by
+{
+	padding: 1rem;
+	text-align: right;
+	font-weight: 900;
+	font-size: 1em;
+	color: #4af6dd;
+	margin-top: 0.2rem;
+}
+
+.tcontainer
+{
+	padding: 60px;
+
+	display: flex;
+
+	justify-content: space-around;
+}
+
+@media (max-width: 900px)
+{
+	.tcontainer
+	{
+		padding: 0px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.testdiv
+	{
+		padding: 10px;
+	}
+}
+
+.downsection
+{
+	min-height: 50vh;
+	background-color: #0a201d;
+
+	padding-top: 30px;
+}
+
+.dinner
+{
+	margin-top: 2rem;
+	background-color: #16423c;
+	padding: 1rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+
+.dsection:nth-child(1){
+	border-right:2px solid #ddd;
+}
+
+.dsection:nth-child(3){
+	border-left:2px solid #ddd;
+
+}
+
+
+@media (max-width: 900px)
+{
+	.dinner
+	{
+		grid-template-columns: none;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+.dsection:nth-child(1){
+	border-bottom:2px solid #ddd;
+	border-right: none;
+}
+
+.dsection:nth-child(3){
+	border-top:2px solid #ddd;
+	border-left: none;
+
+}
+
+}
+
+.dsection
+{
+	width: 100%;
+	min-height: 400px;
+}
+
+.footerdiv
+{
+	padding: 1.5rem;
+	background-color: #0a201d;
+
+	display: flex;
+	justify-content: center;
+
+	color: #fff;
+
+	font-weight: 600;
+	letter-spacing: 2px;
+
+	text-transform: uppercase;
+}
+
+
+
+.hamico
+{
+	font-size: 2em;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width: 900px)
+{
+	.hamico{
+		display: block;
+	}
+}
+
+.mobilenavcontainer
+{
+	background-color: #0a201d;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	display: grid;
+	place-items:center;
+
+	display: none;
+}
+
+.times
+{
+	font-size: 4em;
+	color: #fff;
+	position: absolute;
+	top:1rem;
+	right: 1.5rem;
+	cursor: pointer;
+}
+
+.mobilenavcontainer .navlinks
+{
+	width: 90%;
+	max-width: 800px;
+	height: 60vh;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mobilenavcontainer .navlinks .link a
+{
+	font-size: 1.5em;
+	font-weight: 600;
+	color: #ddd;
+}
+
+.mobilenavcontainer .navlinks .link
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s;
+}
+
+.mobilenavcontainer .navlinks .link:hover
+{
+	border-left: 4px solid #fff;
+	border-right: 4px solid #fff;
+}
+
+.aboutussection 
+{
+	background-color: #fff;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	padding-top: 3rem;
+}
+
+.aboutusmidsection
+{
+	padding: 1rem;
+	width: 90%;
+	max-width: 1000px;
+	background-color: #fff;
+	text-align: center;
+	margin-top: 2rem;
+	background-image: linear-gradient(to right, transparent, var(--gradient-light), transparent);
+}
+
+.aucardcontainer
+{
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+.aucard
+{
+	background-color: #fff;
+	width: 100%;
+	padding: 1rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-radius: 10px;
+	transition: all 0.3s;
+	box-shadow: 5px 10px 10px rgba(255,255,255, 0.5); 
+	cursor: pointer;
+}
+
+.aboutusmidsection:hover .aucard{
+	filter: blur(5px);
+}
+
+.aboutusmidsection .aucard:hover {
+	transform: scale(1.05);
+	filter: blur(0px);
+	box-shadow: 5px 10px 20px rgba(0,0,0, 0.2); 
+}
+
+.aboutusheading
+{
+	border-bottom:  3px solid #fff;
+	padding: 1rem;
+	font-size: 2em;
+	font-weight: bolder;
+}
+
+.aucard h3{
+	margin: 1rem;
+}
+
+.aucard .content
+{
+	margin-top: 0.5rem;
+	text-align: left;
+	padding: 1rem;
+}
+
+.labmemberheading
+{
+	text-align: center;
+	width: 100%;
+	margin-top: 1rem;
+	color: #fff;
+	font-size: 2.5em;
+	border-bottom: 1px solid #fff;
+}
+
+.cardimage
+{
+	height: 200px;
+	background-color: #4af5dd;
+	background-size: cover;
+	background-position: center;
+	filter: brightness(1.3);
+	overflow: hidden;
+}
+
+.labmemberimg
+{
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: cover;
+	transition: all 1s;
+	filter: grayscale(100%);
+}
+
+.cardcontainer:hover .labmemberimg
+{
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+.lmheading
+{
+	position: sticky;
+	top:0px;
+	background-color: #fff;
+	z-index: 2;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	padding: 0.3rem;
+}
+
+.cimg
+{
+	object-fit: cover;
+	object-position: center;
+}
+
+
+.flexcenter
+{
+ display: flex;
+ justify-content: center;
+}
+
+#myCarousel
+{
+	width: 100%;
+	max-width: 1000px;
+}
+
+.gheading
+{
+	padding: 16px 20px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	color:#fff;
+	text-align: center;
+}
+
+.ourworkscontainer
+{
+	padding: 2rem;
+	background-color: #f6f6f6;
+}
+
+.owlistcontainer
+{
+	padding: 1rem 2rem;
+}
+
+@media (max-width: 600px)
+{
+	.ourworkscontainer
+	{
+		padding: 2rem 0rem;
+	}
+
+	.owlistcontainer
+	{
+		padding: 1rem 0rem;
+	}
+}
+
+.owheading
+{
+	padding: 2rem;
+	border-bottom: 1px solid var(--grey);
+	color:#222;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+.owlistcontainer ul
+{
+	margin-top: 1rem;
+	list-style: none;
+
+	max-height: 400px;
+	overflow-y: scroll;
+}
+.owlistcontainer ul li
+{
+	color:#111;
+	margin:1px;
+	background-color: var(--gradient-dark);
+}
+
+
+.liheading
+{
+	font-weight: bolder;
+}
+
+.liheading a
+{
+	padding: 16px 20px;
+	color: #222;
+	font-size: 1.3em;
+	transform: translateY(9px);
+	transition: all 0.2s;
+	display: block;
+	text-decoration: none;
+}
+
+.liheading a:hover
+{
+	transform: translateY(0px);
+	color: #fff;
+	background-color: var(--dark);
+}
+
+
+
+
+
+.licontent
+{
+	font-size: 1.2em;
+}
+
+.owsubheading
+{
+	padding: 1rem;
+	color: #000;
+	font-size: 2em;
+}
+
+.pli
+{
+	padding: 16px 20px;
+	color:#222;
+	font-size: 1.3em;
+	transform: translateY(9px);
+	transition: all 0.2s;
+}
+
+.pli:hover
+{
+	transform: translateY(0px);
+	color: #fff;
+	background-color: var(--dark);
+}
+
+.pli a
+{
+	text-decoration: none;
+	font-weight: bolder;
+	color:inherit;
+	transition: all 0.4s;
+}
+
+.pli a:hover
+{
+	letter-spacing: 1.5px;
+	color: var(--gradient-light);
+}
+
+.eventcontainer
+{
+	background-color: #efe;
+	padding: 1rem;
+}
+
+.eventheading
+{
+	padding: 1rem;
+	color:#333;
+	border-bottom: 1px solid #333;
+	margin:2rem 0rem;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.eventcardcontainer
+{
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+.eventcard
+{
+	display: flex;
+	background-color: #fff;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 200px;
+	overflow: hidden;
+	border-radius: 1rem;
+	transition: 0.3s;
+	margin:2rem 0rem;
+}
+
+.eventcard h2
+{
+	font-size: 1.5em;
+}
+
+.eventimage
+{
+	width: 250px;
+	height: 100%;
+	clip-path: polygon(0 0, 47% 0, 100% 100%, 0% 100%);
+	overflow: hidden;
+	background-color: #03bbff;
+}
+
+.evimg
+{
+	width: 100%;
+	height: 100%;
+	background-color: #03bbff;
+	object-fit: cover;
+	object-position: center;
+}
+
+.evcontent
+{
+	padding: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 2rem;
+	width: 70%;
+}
+
+@media (max-width: 600px)
+{
+	.eventcard
+	{
+		flex-direction: column;
+		height: auto;
+	}
+
+	.eventimage
+	{
+		width: 100%;
+		height: 250px;
+		clip-path: polygon(0 0, 100% 0%, 100% 58%, 0% 100%);
+	}
+
+	.evcontent
+	{
+		width: 100%;
+	}
+}
+.eventcard:hover
+{
+	box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
+	transform: translateY(-5px);
+}
+
+
+.wavecontainer
+{
+	background-color: #fff;
+	position: relative;
+}
+
+.svgcontainer
+{
+	position: relative;
+	height: 20vw;
+}
+
+.svgcontainer svg
+{
+	position: absolute;
+	z-index: 1;
+	bottom: 0px;
+}
+
+.whitegradientcontainer
+{
+	background-image: linear-gradient(to bottom,var(--gradient-light),#fff);
+	height: 20vw;
+	width: 100%;
+	transform: translateY(-2px);
+}
+
+.greenbackdup
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+.greenbackinner
+{
+	width: 95%;
+	background-image: linear-gradient(to bottom,var(--dark),#fff);
+	height: 100%;
+	max-width: 1200px;
+}
+
+.cursor{
+	color: #fff;
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink
+{
+	0%{
+		opacity: 1;
+	}
+
+	50%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://lab.hakim.se/scroll-effects/css/stroll.css">
+
+</head>
+<body>
+
+
+<div class="mobilenavcontainer">
+	<div class="times" onclick="closemnav();">&times;</div>
+
+	<div class="navlinks">
+		<div class="link">
+			<a href="#herocontent" onclick="closemnav()">Home</a>
+		</div>
+		<div class="link">
+			<a href="#aboutusid" onclick="closemnav()">About US</a>
+		</div>
+		<div class="link">
+			<a href="#labmembersid" onclick="closemnav()">Lab Members</a>
+		</div>
+		<div class="link">
+			<a href="#ourworkscontainerid" onclick="closemnav()">Our Works</a>
+		</div>
+		<div class="link">
+			<a href="#eventcontainerid" onclick="closemnav()">Events</a>
+		</div>
+		<div class="link">
+			<a href="#gcid" onclick="closemnav()">Gallery</a>
+		</div>
+
+	</div>
+
+
+</div>
+
+<div class="main">
+	
+<div class="navdiv">
+	<div class="logowrapper">
+		<div class="logo">
+	</div>
+	<div class="textlogo">B</div>
+	</div>
+
+	<div class="navlinks">
+		<div class="link">
+			<a href="#herocontent">Home</a>
+		</div>
+		<div class="link">
+			<a href="#aboutusid">About US</a>
+		</div>
+		<div class="link">
+			<a href="#labmembersid">Lab Members</a>
+		</div>
+		<div class="link">
+			<a href="#ourworkscontainerid">Our Works</a>
+		</div>
+		<div class="link">
+			<a href="#eventcontainerid">Events</a>
+		</div>
+		<div class="link">
+			<a href="#gcid">Gallery</a>
+		</div>
+
+	</div>
+
+	<div class="hamico" onclick="openmnav();">&#9776;</div>
+</div>
+
+
+<div id="herocontent" class="graphicdiv">
+	
+	<div class="smallcircle"></div>
+
+	<div class="smallcircle2">
+		<div class="plant"></div>
+	</div>
+
+	<div class="maintitle">Laboratory of Computational Biology <span class="cursor">|</span></div>
+</div>
+
+
+<script type="text/javascript">
+
+	let totalstr = "Laboratory of Computational Biology   ";
+	let maintitle = document.querySelector('.maintitle');
+
+	let mtstr = "";
+	let mtit = 0;
+
+	function addchar()
+	{
+		let ch = totalstr[mtit++];
+			mtstr += ch;
+
+		if(mtit == totalstr.length)
+		{
+			mtit = 0;
+			mtstr = "";
+		}
+
+		maintitle.innerHTML = mtstr+"<span class='cursor'>|</span>";
+	}
+
+	setTimeout(()=>{setInterval(addchar,500)},3000);
+
+</script>
+
+<div id="aboutusid" class="aboutussection">
+
+	<div class="aboutusmidsection"> 
+	<div class="aboutusheading">
+		About Us
+	</div>
+
+
+	<div class="aucardcontainer">
+		<div class="aucard"> 
+			<h3>Food Security Initiative</h3>
+			<div class="content">
+				As part of the DBT-Cambridge Lectureship program, I am trying to explore the connection between photosynthetic efficiency and epigenetic inheritance. This is being investigated through comparative analysis of Carbon concentrating mechanisms in model plants and green algae, using available leaf DNAse sequence datasets for select C3/C4 species, as well as various light and dark stage transcriptomes along the Chlamydomonas diurnal cycle. (Work Funded by the RCUK)
+			</div>
+		</div>
+		<div class="aucard"> 
+			<h3>Data Science & Complex Networks</h3>
+			<div class="content">
+				Recognising that biological networks are complex systems, vulnerable to attacks or failure, we have gained insights into network resilience and susceptibility through induction of a variety of random and targeted perturbations in hundreds of biological networks, followed by investigation of their responses under attack. This has enabled us to develop tools for predicting robustness in real world networks. We are also constructing species specific GRNs for selected gene families such as the Star-related lipid transfer domains, Histone-fold motif and KIX, in order to understand functional diversification during evolution. (Work Funded by DBT-BTISNET)
+			</div>
+		</div>
+	
+		<div class="aucard"> 
+			<h3>Computational Ecology</h3>
+			<div class="content">
+				Our focus is on plant communication mediated by phytochemicals, using knowledge based Big Data approaches like genomics, Geo-spatial imaging and species distribution modeling. We are particularly interested in exploring the role played by volatile organic compounds in mediating biological invasions by alien plant species, better known as the 'Novel Weapons Hypothesis'. In collaboration with field ecologists, we are approaching invasion biology from a genomics standpoint, wherein we compare Phytochemical dynamics within and across habitats, in order to build models for understanding invasion success at both above-ground and plant-soil interaction level. (Work Funded by SERB/DST)
+
+			</div>
+		</div>
+	
+	</div>
+	</div>
+</div>
+
+<div class="maincontent">
+	<div id="labmembersid" class="maininner">
+		<div class="labmemberheading">Lab Members</div>
+	<div class="container">
+		
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/M9lEwRo.jpg" class="labmemberimg">
+			</div>
+			<div class="cardtext">
+
+			<h3>Dr. Renu Kumari</h3>	
+			<p>Renu is presently a Research Associate (III) in the lab, working on plant natural products and Biodievrsity Informatics. She holds a B.Sc. in Life sciences and a Master's Degree in Biotechnology, both from Jiwaji University, Gwalior, M.P. She obtained her Ph.D. from Banasthali University Rajasthan in 2013 under the
+co-guidance of Prof. Sushil Kumar, NIPGR in the area of Characterizing salinity tolerant morphological mutants in the medicinal-cum-ornamental plant Catharanthus roseus. Presently, she is working on a CSIR-funded grant to investigate the HMGR gene family in cold season food legume crop Cicer arietinum. She is also involved in the study of the Invasive Terpenome, with special focus on Lantana camara.</p>
+			
+		</div>
+		</div>
+
+
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/bXIlKog.jpg" class="labmemberimg">
+			</div>
+			<div class="cardtext">
+
+			<h3>Dr. Sagar Jadhav</h3>	
+			<p>Sagar is currently a Postdoctoral Research Associate (PDRA) on the India-U.K TIGR2ESS program. He holds a Ph.D. (Molecular Plant Physiology), from Max Planck Institute of Molecular Plant Physiology, Potsdam, Germany, as well as an M.Sc. (Agri.) degree in Crop Physiology, from UAS, GKVK, Bengaluru, Karnataka, India. He did his B.Sc. in Agriculture Biotechnology from Dr. PDKV, Akola, Maharashtra, India.
+Currently he is working on extracting knowledge from scientific literature, making use of his expertise in metabolomics, bioinformatics and transgenics.
+Email:- sasujadhav@gmail.com
+			</p>
+			
+		</div>
+		</div>
+
+
+		<div class="cardcontainer">
+			<div class="cardimage">				
+				<img src="https://i.imgur.com/XQiVlYh.jpg" class="labmemberimg"></div>
+			<div class="cardtext">
+
+			<h3>Mr. Vipin Kumar</h3>	
+			<p>Vipin is currently a Senior Research Fellow (SRF) in the lab. He graduated with Honors in Botany from Zakir Husain College, University of Delhi, before obtaining a Master’s Degree in Environmental Studies from the Department of Environmental Studies, University of Delhi. His M.Sc. dissertation focused on “Variability
+of Leaf Construction Cost Among Invasive Growth Forms”. His current work is in the area of Biodiversity Informatics in collaboration with Dr. Suresh Babu (AUD Delhi). Vipin is an expert in chemical ecology with focus on the effect of heavy metals on agri-productivity in peri-urban areas of Delhi.
+
+Mr. Sanjeet Kumar Mahtha
+Sanjeet is currently a Ph.D. student in the group. He holds an M.Sc. degree in Biotechnology from Pondicherry University, Pondicherry, before which he graduated with a B.Sc. in Biotechnology from Dr. Bhimrao Ambedkar University, Agra, Uttar Pradesh.
+Sanjeet's thesis work involves Computational analysis of the StAR-related lipid transfer (START) domains in plants.
+Email:- sanjeetmahtha@gmail.com, sanjeetmahtha@nipgr.ac.in
+			</p>
+			
+		</div>
+		</div>
+
+
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/I54TvYc.jpg" class="labmemberimg" style="object-position: top;">
+			</div>
+			<div class="cardtext">
+
+			<h3>Mr. Sanjeet Kumar Mahtha</h3>	
+			<p>Sanjeet is currently a Ph.D. student in the group. He holds an M.Sc. degree in Biotechnology from Pondicherry University, Pondicherry, before which he graduated with a B.Sc. in Biotechnology from Dr. Bhimrao Ambedkar University, Agra, Uttar Pradesh.
+Sanjeet's thesis work involves Computational analysis of the StAR-related lipid transfer (START) domains in plants.
+Email:- sanjeetmahtha@gmail.com, sanjeetmahtha@nipgr.ac.in
+			</p>
+			
+		</div>
+		</div>
+
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/BLmhoMY.jpg" class="labmemberimg" style="object-position: top;">
+			</div>
+			<div class="cardtext">
+
+			<h3>Ms. Citu</h3>
+			<p>Citu is currently a Ph.D. student in the lab. She holds an M.Sc. degree in Biotechnology, from Central University of Haryana. She graduated with Honors in Botany (B.Sc. (H) Botany) from Ramjas College, University of Delhi. Her thesis work contributes to the India-U.K TIGR2ESS project and involves Identification of key components and regulatory pathways of biophysical carbon concentrating mechanism (CCM) in Chlamydomonas reinhardtii.
+Email:- guliasitu40@gmail.com, guliasitu40@nipgr.ac.in
+
+			</p>
+			
+		</div>
+		</div>
+
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/5XoDfut.jpg" class="labmemberimg" style="object-position: top;">
+			</div>
+			<div class="cardtext">
+
+			<h3>Mr. Abhishek Prasad</h3>	
+			<p>Abhishek is currently a Ph.D. student in the lab. He holds an M.Sc. degree in Plant Breeding and Genetics, along with a B.Sc degree in Agriculture, both from Bihar Agricultural College, Sabour, Bhagalpur, Bihar. His work contributes to Biodiversity Informatics, and involves Understanding biological invasions through genomic, transcriptomic and metabolomic investigations of alien invasive plant species.
+Email:- abhishek1992@nipgr.ac.in
+
+			</p>
+			
+		</div>
+		</div>
+
+
+		<div class="cardcontainer">
+			<div class="cardimage" >
+				<img src="https://i.imgur.com/o6p9X5U.jpg" class="labmemberimg" style="object-position: top;">
+			</div>
+			<div class="cardtext">
+
+			<h3>Ms. Kamlesh Kumari</h3>	
+			<p>Kamlesh is presently a Ph.D. student in the lab. She holds an M.Sc. in Botany from the University of Rajasthan, as well as a B.Sc. in Life Science from Kurukshetra University, Haryana. She is presently developing Ai and ML based methods to decipher features of prion like proteins in the plant kingdom, and dissecting the roles of these domains in plants.
+Email:- kamleshkumari@nipgr.ac.in
+
+			</p>
+			
+		</div>
+		</div>
+
+
+		<div class="cardcontainer">
+			<div class="cardimage">
+				<img src="https://i.imgur.com/WrSoTjD.jpg" class="labmemberimg" style="object-position: top;">
+			</div>
+			<div class="cardtext">
+
+			<h3>Ms. Prabha</h3>	
+			<p>Prabha is also a Ph.D. student in the lab, working on a project that is in collaboration with Dr. Vineet Gaur, NIPGR. She holds Master's and Bachelor's (Hon) degrees, both in Botany, both from the University of Delhi. She is currently using biochemical and crystallography techniques to investigate the DNA repair machinery in plants, specifically the Halliday Junction elements.
+
+			</p>
+			
+		</div>
+		</div>
+
+
+	</div>		
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/kute.js/1.6.2/kute.min.js"></script>
+
+<div class="wavecontainer">
+	<div class="greenbackdup"><div class="greenbackinner"></div></div>
+	<div class="svgcontainer">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+
+			<path id="path2"  fill="var(--gradient-dark)" fill-opacity="0.5" d="M0,192L48,165.3C96,139,192,85,288,101.3C384,117,480,203,576,229.3C672,256,768,224,864,197.3C960,171,1056,149,1152,154.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+
+			<path id="path1" fill="var(--gradient-light)" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+
+		</svg>
+	</div>
+
+
+	<div class="whitegradientcontainer">
+		
+	</div>
+</div>
+
+
+<!--div class="testdiv">
+<div class="tcontainer">
+	<div class="tcard">
+	<div>
+		<p>"This is the best company i ever worked with"</p>
+		<div class="by">by somename</div>
+	</div>
+	</div>
+	
+	<div class="tcard">
+	<div>
+		<p>"This is the best company i ever worked with"</p>
+		<div class="by">by somename</div>
+	</div>
+	</div>
+</div>
+</div-->
+
+
+<!--div class="downsection">
+	<div class="dinner">	
+		<div class="dsection"></div>
+		<div class="dsection"></div>
+		<div class="dsection"></div>
+	</div>
+</div-->
+
+
+<script type="text/javascript">
+	
+let mnav = document.querySelector('.mobilenavcontainer');
+function closemnav()
+{
+	mnav.style.display = "none";
+}	
+
+function openmnav()
+{
+	mnav.style.display = "grid";
+}	
+</script>
+
+<script type="text/javascript">
+	
+	let cardtexts = document.querySelectorAll('.cardtext');
+	let morebuttons = document.querySelectorAll('.morebutton');
+	let cardcontainers = document.querySelectorAll('.cardcontainer');
+
+	for(let i  = 0; i < morebuttons.length; i ++)
+	{
+		let morebutton = morebuttons[i];
+		morebuttons[i].id = i;
+
+		morebutton.onclick = function()
+		{
+			let mytext = morebutton.innerHTML;
+
+			let id = this.id;
+
+			console.log(id);
+
+			if(mytext == 'More')
+			{
+				cardtexts[id].style.height = "auto";
+				morebutton.innerHTML = "Less";
+				cardcontainers[id].style.height = "auto";
+			}
+			else
+			if(mytext == 'Less')
+			{
+				cardtexts[id].style.height = "230px";
+				morebutton.innerHTML = "More";				
+				cardcontainers[id].style.height = "450px";
+			}	
+		};
+	}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+
+<script>
+VANTA.CELLS({
+  el: "#herocontent",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  color1: 0x18bd21,
+  color2: 0x86f235
+});
+</script>
+
+
+<div id="ourworkscontainerid" class="ourworkscontainer">
+	
+	<div class="owheading">Our Works</div>
+	
+
+	<div class="owlistcontainer">
+		<div id="ulcontainer" class="owsubheading">Media Coverage & Public Links</div>
+
+	<div id ="main">
+	<ul class="mediacoverageclass">
+		
+	</ul>
+	<!--li>
+			<div class="liheading"><a href="https://www.thehindu.com/news/cities/Tiruchirapalli/sastra-awards-presented/article33964132.ece"> SASTRA National Science Day Awards 2021 - (The Hindu, March 2021)</a></div> 
+	</li-->
+	</div>
+	
+	</div>
+
+	<div class="owlistcontainer">
+		<div id="ulcontainer" class="owsubheading">Publications</div>
+	<div class="main2">
+		<ul class="publicationclass">
+		
+		</ul>
+		<!--li>
+			<div class="pli">
+				Garai S, C Citu, Singla-Pareek SL, Sopory SK, Kaur C, Yadav G* (2021) Complex Networks of Prion-like proteins reveal crosstalk b/w Stress & Memory pathways in Plants. Frontiers in Plant Science. 12, 1513, <a target ="_blank" href="https://www.frontiersin.org/articles/10.3389/fpls.2021.707286/full">https://doi.org/10.3389/fpls.2021.707286</a>
+			</div>
+		</li-->
+	</div>
+	</div>
+
+</div>
+
+
+<div id="eventcontainerid" class="eventcontainer">
+	
+	<div class="eventheading">Events</div>
+
+	<div class="eventcardcontainer">
+
+		<div class="eventcard">
+			<div class="eventimage"><img src="https://images.squarespace-cdn.com/content/v1/55c37beae4b0336075603f86/1443039469134-E9SLQBQ2OW1Y69KPKFDO/image-asset.jpeg?format=2500w" class="evimg"></div>
+			<div class="evcontent">
+				<h2>We-VIDYA (Women enabled for Virtual Induction as Data youth and AI Professionals)</h2>
+				<div class="evdetails"> Gitanjali Yadav organised the Four day Data Science Workshop for Indian Women funded by <a href="https://dst.gov.in/scientific-programmes/scientific-engineering-research/women-scientists-programs" target="_blank">DST-KIRAN</a>, <a href="http://rich.telangana.gov.in/" target="_blank">RICH-HCC</a>, <a href="https://inyas.in/" target="_blank">INYAS</a> and <a href="https://tigr2ess.globalfood.cam.ac.uk/" target="_blank">TIGR2ESS</a>. The aim is to conduct these events on a regular basis for bridging the Digital Gender Divide in India, in collaboration with University of Cambridge. Click here for more information.</div>
+			</div>
+		</div>
+
+		<div class="eventcard">
+			<div class="eventimage"><img src="https://images.squarespace-cdn.com/content/v1/55c37beae4b0336075603f86/1443039469134-E9SLQBQ2OW1Y69KPKFDO/image-asset.jpeg?format=2500w" class="evimg"></div>
+			<div class="evcontent">
+				<h2>GROW-ECR</h2>
+				<div class="evdetails">A Live Hands-on week long training in R coding for Data Skills for Early Career Researchers in India and the U.K. Scheduled to be held online in November 2021. Registration Information to be updated soon - Watch This Space!
+				</div>
+			</div>
+		</div>
+
+		<div class="eventcard">
+			<div class="eventimage"><img src="https://images.squarespace-cdn.com/content/v1/55c37beae4b0336075603f86/1443039469134-E9SLQBQ2OW1Y69KPKFDO/image-asset.jpeg?format=2500w" class="evimg"></div>
+			<div class="evcontent">
+				<h2>National Frontiers of Science (NatFoS) Meeting 2019</h2>
+				<div class="evdetails">funded by Office of the <a href="https://www.psa.gov.in/">Principal Scientific Advisor</a> to Govt of India, and the <a href="https://tigr2ess.globalfood.cam.ac.uk/">RCUK-BBSRC TIGR2ESS Program</a>. As member of the National Core Committee of <a href="http://www.insaindia.res.in/INYAS/">Indian National Young Academy of Science (INYAS)</a>, Dr. Gitanjali Yadav was the Convener of this meeting. For more information,<a href="http://www.nipgr.ac.in/natfos/index.html"> Click Here</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="eventcard">
+			<div class="eventimage"><img src="https://images.squarespace-cdn.com/content/v1/55c37beae4b0336075603f86/1443039469134-E9SLQBQ2OW1Y69KPKFDO/image-asset.jpeg?format=2500w" class="evimg"></div>
+			<div class="evcontent">
+				<h2>TIGR2ESS R4R India-U.K First Bioinformatics Workshop</h2>
+				<div class="evdetails">A live Hands-On workshop on using R for Biological Data Analysis, RNA-Seq and Agricultural Genomics and Text MIning. Held in Feb-March 2019. For more information, <a href="https://github.com/gilienv/R4R">click here</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+<div id="gcid" class="gallerycontainer">
+	  <div class="gheading"><h2>Gallery</h2></div>
+
+<div class="flexcenter">		
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img class="cimg" src="https://i.imgur.com/yOkKjD2.jpg" alt="Los Angeles" style="width:100%; height:70vh;">
+        <div class="carousel-caption">
+          <!--h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p-->
+        </div>
+      </div>
+
+      <div class="item">
+        <img class="cimg" src="https://i.imgur.com/CuTfVXh.jpg" alt="Chicago" style="width:100%; height:70vh;">
+        <div class="carousel-caption">
+          <!--h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p-->
+        </div>
+      </div>
+    
+      <div class="item">
+        <img class="cimg" src="https://i.imgur.com/PmaJJLA.jpg" alt="New York" style="width:100%; height:70vh;">
+        <div class="carousel-caption">
+          <!--h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p-->
+        </div>
+      </div>
+  
+      <div class="item">
+        <img class="cimg" src="https://i.imgur.com/mYrW1za.jpg" alt="New York" style="width:100%; height:70vh;">
+        <div class="carousel-caption">
+          <!--h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p-->
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+<div class="footerdiv">@ copyright 2021 </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+let mediacoverageclass = document.querySelector('.mediacoverageclass');
+
+function getmediacoveragelink(text,link)
+{
+	let mli = `<li><div class="liheading"><a target="_blank" href="${link}"> ${text}</a></div></li>`;
+	return mli;
+}	
+
+let mediacoveragearr = [ ["SASTRA National Science Day Awards 2021 - (The Hindu, March 2021)","https://www.thehindu.com/news/cities/Tiruchirapalli/sastra-awards-presented/article33964132.ece"],
+["The Botanist Redefining our Relationship with Plants (Makers INDIA, Feb 2021)","https://in.makers.yahoo.com/gitanjali-yadav-botanist-redefining-relationship-with-plants-030031075.html?guccounter=1"],
+["Obaid Siddiqi NSD Award Lecture (National Science Day 2021)","Obaid Siddiqi NSD Award Lecture (National Science Day 2021)"],
+[" 	U.K Govt International Mobility (Feb 2021)","https://twitter.com/UKinIndia/status/1362750024191414281"],
+["Coping with COVID 2020: Indian Express (Aug 2020)","http://www.nipgr.ac.in/files/misc/IndianExpress_Aug23_Women_GY.pdf"],
+["GY Lab Interview","https://www.tobysmith.com/project/8822/"],
+["Our work on Food Security","https://www.youtube.com/watch?v=l0T1HQc6aPs&feature=youtu.be"],
+["Cambridge GFS 2020","https://www.globalfood.cam.ac.uk/news/gitayadav"],
+["50 Years of Women at Cambridge","www.womenatstedmunds.co.uk/eddies50/24-gita-yadav-fellow/"],
+[" 	Science for Humanity","https://www.deccanherald.com/science-and-environment/science-for-humanity-809308.html"],
+["Nurturing a Support System for Women in Science","https://researchmatters.in/news/nurturing-support-system-india%E2%80%99s-women-scientists"],
+["Online Lab Meeting 2020 SRFP-INYAS-KARYA Summer Internship Program","https://www.youtube.com/watch?v=XiTngk-POm8"],
+["The Plant Terpenome","https://www.botanic.cam.ac.uk/whats-on/science-on-sundays-may20/"],
+["Harnessing The Ecological Data Revolution","https://eco.confex.com/eco/2020/meetingapp.cgi/Paper/87172"],
+[" 	Green Carbon For Food Security","https://eco.confex.com/eco/2020/meetingapp.cgi/Paper/81958"],
+["INYAS Science and Serendipity 2020","https://www.youtube.com/watch?v=6kbbm356SxQ"],
+["Green Algal Photosynthesis","https://www.youtube.com/watch?v=imNCtOT5D1M&feature=youtu.be"],
+["CEFIPRA WiS Seminar CNRS Paris","https://www.youtube.com/watch?v=ixOrxTD3feQ&feature=share&fbclid=IwAR1McDrMtnW2a2aftr7qVg-1JZfn_DVlsEIz_MmHzmT0xaMRehK34TNzBAA"],
+["Report on Policies and Action Plan for a secure and sustainable Agriculture, Govt of India. (2019)","https://www.psa.gov.in/sites/default/files/pdf/Report%20of%20Policies%20and%20Action_4-92019.pdf"],
+[" 	The plan to mine the worlds research papers Nature News, (2019)","https://www.nature.com/articles/d41586-019-02142-1"],
+["The secret Life of Plants, Cambridge Alumni Magazine, (2019) Vol86","https://www.cam.ac.uk/secretlifeofplants"],
+["Coverage of Work and Scientific Outreach under RCUK- GCRF TIGR2ESS (2019)","https://www.tobysmith.com/project/8822/"],
+["Funding Challenges in Research (2018) Journey of a Young Investigator, IndiaBioscience (2018)","https://indiabioscience.org/columns/journey-of-a-yi/funding-challenges-in-research"],
+["The Botanist Researching the Inner World of Plants. (2017) This Cambridge Life, Magazine","https://medium.com/this-cambridge-life/the-botanist-researching-the-inner-world-of-plants-d2a10a062f25"],
+["CSaP Science & Policy","CSaP Science & Policy"],
+["TIGR2ESS Field Trip in Rural Haryana (2018) ","https://www.tobysmith.com/project/field-trip-to-haryana/"],
+["Rural Science Outreach (2018)","https://www.tobysmith.com/project/community-science-outreach/"],
+["Haryana Honours Scientists, The Hindu, National Daily, India (2012)","https://www.thehindu.com/todays-paper/tp-national/tp-newdelhi/haryana-honours-scientists/article3398994.ece"]
+];
+
+for(let i = 0; i < mediacoveragearr.length; i++)
+{
+	let text = mediacoveragearr[i][0];
+	let link = mediacoveragearr[i][1];
+
+	let li = getmediacoveragelink(text,link);
+	mediacoverageclass.innerHTML += li;
+
+}
+
+
+let publicationclass = document.querySelector('.publicationclass');
+
+
+function createplinkstr(normaltext,atext,alink)
+{
+	let str=  ""+normaltext + "["+atext+"|"+alink+"]";
+	return str;
+}
+
+function getpli(link)
+{
+
+	let ctr = 0;
+	let text  = '';
+	let atext = '';
+	let alink = '';
+	for(let i = 0; i < link.length; i ++)
+	{
+		let ch = link[i];
+
+		if(ch != '[' && ch != '|' && ch != ']')
+		{
+		if(ctr == 0)
+		{
+			text += ch;
+		}
+		else
+		if(ctr == 1)
+		{
+			atext += ch;
+		}
+		if(ctr == 2)
+		{
+			alink += ch;
+		}
+
+		}
+
+		if(ch == '[')
+		{
+			ctr ++;
+		}
+
+		if(ch == '|')
+		{
+			ctr ++;
+		}
+	}
+
+
+	let pli = `<li><div class="pli">
+				${text}`;
+
+	if(atext != '')
+	{
+		let aptag = `<a href ="${alink}" target = "_blank">${atext}</a> `;
+		pli += aptag;
+	}
+
+	pli += `</div></li>`;
+
+	return pli;
+}
+
+let publicationsarr = [
+["Garai S, C Citu, Singla-Pareek SL, Sopory SK, Kaur C, Yadav G* (2021) Complex Networks of Prion-like proteins reveal crosstalk b/w Stress & Memory pathways in Plants. Frontiers in Plant Science. 12, 1513,","https://doi.org/10.3389/fpls.2021.707286","https://doi.org/10.3389/fpls.2021.707286"],
+
+
+["Gupta R, Prasad A, Babu S, Yadav G*. (2021) Impact of Coronavirus Outbreaks on Science and Society: Insights from Temporal Bibliometry of SARS and COVID-19. Entropy 2021, 23, 626."," https://doi.org/10.3390/e23050626","https://doi.org/10.3390/e23050626"],
+
+[" 	Kumar A and Yadav G*. (2021) Shared ancestry of core-histone subunits and non-histone plant proteins containing the Histone Fold Motif (HFM) Journal of Bioinformatics and Computational Biology, 2021, 19 (2)", "https://doi.org/10.1142/S0219720021400011", "https://www.worldscientific.com/doi/abs/10.1142/S0219720021400011"],
+
+["Misra P, Prasad A, Babu S and Yadav G* (2020) Decision Support Systems based on Scientific Evidence: Bibliometric Networks of Invasive Lantana camara. Proc Ind Natl Sc. Acad (In Press) doi 10.1101/2020.08.10.240879","",""],
+
+[" Verma P, Tandon R, Yadav G, Gaur V (2020) Structural aspects of DNA repair and recombination in crop improvement. Frontiers in Genetics doi 10.3389/fgene.2020.574549","",""],
+
+["Mahtha SK, Purama R, Yadav G* (2020)","Comparative genomics of StAR-related lipid transfer (START) domains across wild and cultivated rice","https://www.biorxiv.org/content/10.1101/2020.07.20.211607v1"],
+["Sharma M, Jamsheer MK, Shukla BN, Awasth PA, Mahtha SK, Yadav G and Laxmi A (2020)"," TOR coordinates with transcriptional and chromatin machinery to regulate thermotolerance and thermomemory","https://www.biorxiv.org/content/10.1101/2020.07.28.224634v1"],
+["Smita S, Katyar A, Dalal, Mahtha SK,..Yadav G, Mani P and Bansal KC (2019) Gene network modules associated with abiotic stress response in tolerant rice genotypes identified by transcriptome meta-analysis, Functional and Integrative Genomics (DOI s10142-019-00697-w)","",""],
+["","Yadav G* Funding Challenges in Research (2018) Journey of a Young Investigator (JOYI) Series, Indiabioscience, March 2018","https://indiabioscience.org/columns/journey-of-a-yi/funding-challenges-in-research"],
+["Babu, S and Yadav G* (2018) Extinction Curves and Error Propagation in Mutualistic Ecological Networks: The Case of Frugivores in a Tropical Rainforest. In Proceedings of the 7th International Conference on Complex Networks and Their Applications. December 11-13, 2018, Cambridge, United Kingdom.","",""],
+["Priya P, Yadav A, Jyoti C and Yadav G* (2018)  TERZYME: A Tool for Quantification and Analysis of the plant Terpenome. Plant Methods (In Press)","",""],
+["Yadav A, Thakur JK and  Yadav G* (2017)  KIXBASE: A Comprehensive web resource for identification and exploration of KIX domains. Scientific Reports 7(1):14924.","",""],
+["Yadav G and Mohanty, D (2017) Databases developed in India for Biological Sciences. Journal of Proteins and Proteomics 8(3), 159-167 ","",""],
+["Patra B, Kon Y, Yadav G, Sevold A,.. Hintze A, Galas D and Ray A* (2017) A genome wide dosage suppressor network reveals genetic robustness Nucleic Acids Research 45(1),255–270","",""],
+["Priya P, Kumari S and Yadav G* (2016) Quantification of the plant terpenome: predicted versus actual emission potentials. Ind J Plant Phys DOI: 10.1007/s40502-016-0256-x ","",""],
+["Yadav G* and Babu S (2016) Evidence for alternate stable states in collapsing ecological networks. doi: Biorxiv/2016/046045 ","",""],
+["Amish K and Yadav G* (2016) Diversification of the Histone Fold Motif (HFM) in Plants: Evolution of New Functional Roles. Defence Life Science Journal (Vol1:1) DOI: 10.14429/dlsj.1.10061","",""],
+["Babu S and Yadav G* (2016) Co-Authorship Networks Reveal Patterns of Scientific Collaboration and Research Impact. Defence Life Science Journal (Vol1:1) DOI: 10.14429/dlsj.1.10087","",""],
+["Priya P, Bandhiwal N, Misra G, Mondal S and Yadav G* (2015) IGMAP: An Interactive Mapping and Clustering Platform for Plants. Molecular Plant. 8(5): 818–821. doi:10.1016/j.molp.2015.01.018 ","",""],
+["Parween S, Nawaz K, Roy R, Pole AK, Venkata Suresh B, Misra G, Jain M, Yadav G, Parida SK, Tyagi AK, Bhatia S, Chattopadhyay D (2015) An advanced draft genome assembly of a desi type chickpea (Cicer arietinum L.). Scientific Reports Doi: 10.1038/srep12806.","",""],
+["Kumari S, Pundhir S, Priya P, Jeena G, Punetha A, Chawla K, Jafaree Z, Mondal S and Yadav G* (2014) EssOilDB: A Database of Essential Oils reflecting Terpene Composition and Variability in the Plant Kingdom. Database DOI: 10.1093/database/bau120","",""],
+["Misra G, Priya P, Bandhiwal N, Bareja N, Jain M, Bhatia S, Chattopadhyay D, Tyagi AK and Yadav G* (2014) The Chickpea Genomic Web Resource: Visualization and Analysis of the Desi-type Cicer arietinum Nuclear Genome for Comparative Exploration of Legumes. BMC Plant Biology. 14(1): 315","",""],
+["(Recommended by Faculty of 1000) Schrick K, Bruno M, Khosla A, Roque RA, Nguyen H, Snyder MP, Singh D and Yadav G (2014) Shared functions of plant and mammalian StAR-related lipid transfer (START) domains in modulating transcription factor activity. BMC Biology. 12:70 doi:10.1186/s12915-014-0070-8","(View Recommendation Here)","http://www.nipgr.ac.in/research/F1000Prime.html"],
+["Thakur JK, Yadav A and Yadav G* (2014) Molecular recognition by the KIX domain and its role in gene regulation. Nucl. Acids Res. 42 (4): 2112-2125","",""],
+["Kumari S, Priya P, Misra G and Yadav G* (2013) Structural and biochemical perspectives in plant isoprenoid biosynthesis. Phytochemistry Reviews. 12: 255-291","",""],
+["Jain M, Misra G, Patel RK, Priya P, Jhanwar S, Khan AW, Shah N, Singh VK, Garg R, Jeena G, Yadav M, Kant C, Sharma P, Yadav G, Bhatia S, Tyagi AK, Chattopadhyay D (2013) A draft genome sequence of the pulse crop chickpea (Cicer arietinum L.). Plant Journal. DOI: 10.1111/tpj.12173","",""],
+["Kumari R, Yadav G, Sharma V & Kumar S (2013) Cytosine hypomethylation at CHG and CHH sites in the pleiotropic mutants of Mendelian inheritance in Catharanthus roseus. Journal of Genetics 92(3): 499-511","",""],
+["Kumar S, Kumari R, Sharma V & Yadav G (2013) Common and Distinguishing Characteristics of Genes and Genomes and Their Evolution in the Genome Sequenced Legumes. Proc Indian Natl Sci Acad. 79 (2): 277-286","",""],
+["Yadav G, Anand S and Mohanty D (2013) Prediction of inter domain interactions in modular polyketide synthases by docking and correlated mutation analysis. Journal of Biomolecular Structure and Dynamics 31(1): 17-29. (Spl Issue: Predictive biology using systems and integrative analysis and methods)","",""],
+["Yadav G* and Babu S (2012) NEXCADE: Perturbation Analysis for Complex Networks. PLoS ONE 7(8): e41827. doi:10.1371/journal.pone.0041827","",""],
+["Kumari S, Shridhar S, Singh D, Farmer R, Hundal J, Priya P, Sharma P, Bhavishi K, Schrick K, and Yadav G*. (2012) The role of lectins and HD-ZIP transcription factors in Isoprenoid based plant stress responses Proc. Ind. Natl. Sci. Acad. 78 (4): 671-691 (Article in Cover Illustration)","",""],
+["Gaur R, Azam S, Jeena G, Khan AW, Chaudhary S, Jain M, Yadav G, Tyagi AK, Chattopadhyay D, Bhatia S (2012) High-throughput SNP discovery and genotyping for constructing a saturated linkage map of chickpea (Cicer arietinum L.). DNA Research pp:1-17 doi:10.1093/dnares/dss018","",""],
+["Chaudhary S, Sharma V, Prasad M, Bhatia S, Tripathi BN, Yadav G, Kumar S (2011) Characterization and genetic linkage mapping of the horticulturally important mutation leafless inflorescence (lli) in periwinkle Catharanthus roseus. Sci. Horti. (in press) Doi: 10.1016/j.scienta.2011.02.025","",""],
+["Garg R, Patel RK, Jhanwar S, Priya P, Bhattacharjee A, Yadav G, Bhatia S et al (2011) Gene discovery and tissue-specific transcriptome analysis in chickpea with massively parallel pyrosequencing and web resource development. Plant Physiol 156: 1661-1678.","",""],
+["Anand S, Prasad MV, Yadav G, Kumar N, Shehara J et al.(2010) SBSPKS: structure based sequence analysis of polyketide synthases. Nucl. Acids. Res. 2010 May 5. (Epub ahead of print)","",""],
+["Shridhar S, Chattopadhyay D and Yadav G* (2009) PLecDom: A program for identification and analysis of plant Lectin Domains. Nucl. Acids. Res. Jul 1;37: W452-8. Epub 2009 May 27.","",""],
+["Kumar S, Mishra RK, Chaudhary S, Pandey R and Yadav G (2009) Co-regulation of Biomass Partitioning by Leafblade Morphology Genes Afila, Multifoliate-pinna, Tendril-less and Unifoliata in Grain Pea Pisum sativum. Proc. Ind. Natl. Sc. Acad, 75 No. 1 pp 15-25.","",""],
+["Yadav G, Gokhale RS and Mohanty D (2009) Towards prediction of metabolic products of Polyketide Synthases: An In Silico analysis. PLoS. Comp. Biol. Apr; Vol 5(4): e1000351.","",""],
+["Yadav G*, Prasad RLA, Jha BK, Rai V, Bhakuni VK and Datta K (2008). Evidence for inhibitory interaction of hyaluronan binding protein 1 (HABP1/p32/gC1qR) with S. pneumoniae hyaluronidase. J. Biol. Chem 284(6): 3897-3905 (*corresponding authors)","",""],
+["Kaur H, Shukla RK, Yadav G, Chattopadhyay D and Majee M (2008) Two divergent genes encoding L-myo-inositol 1 -phosphate synthase1 (CaMIPS1) and 2 (CaMIPS2) are differentially expressed in chickpea. Plant, Cell and Environment 31: 1701-1716.","",""],
+["Chopra T, Banerjee S, Gupta S, Yadav G, Anand S, et al. (2008) Novel Intermolecular Iterative Mechanism for Biosynthesis of Mycoketide Catalyzed by a Bimodular Polyketide Synthase. PLoS Biology 6(7): e163 doi:10.1371/journal.pbio.0060163.","",""],
+["Ansari MZ, Yadav G, Gokhale RS and Mohanty D (2004) NRPS-PKS A knowledge based resource for analysis of non-ribosomal peptide synthetases and polyketide synthases. Nucl. Acids Res. 32: W401-W415.","",""],
+["Yadav G, Gokhale RS and Mohanty D (2003) Computational approach for prediction of domain organization and substrate specificity of modular polyketide synthases. J. Mol. Biol. 328: 335-63.","",""],
+["Yadav G, Gokhale RS and Mohanty D (2003) SEARCHPKS: A Program for detection and analysis of polyketide synthase domains. Nucl. Acids Res. 31: 3654-3658.","",""],
+["Saxena P, Yadav G, Mohanty D and Gokhale RS (2003) A new family of type III polyketide synthases in Mycobacterium tuberculosis. J. Biol. Chem. 278: 44780-90.","",""]
+];
+
+let link = createplinkstr(publicationsarr[0][0],publicationsarr[0][1],publicationsarr[0][2]);
+
+for(let i=0; i < publicationsarr.length; i++)
+{
+	let normaltext = publicationsarr[i][0];
+	let linktext = publicationsarr[i][1];
+	let linkhref = publicationsarr[i][2];
+
+	let link  = createplinkstr(normaltext,linktext,linkhref);
+	let pli = getpli(link);
+
+	publicationclass.innerHTML += pli;
+}
+</script>
+
+
+<script src="https://cdn.tutorialjinni.com/stroll.js/1.0/js/stroll.min.js"></script>
+<script>
+ stroll.bind( document.querySelectorAll('ul'));
+</script>
+
+</body>
+</html>
